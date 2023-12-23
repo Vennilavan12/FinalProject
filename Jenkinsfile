@@ -16,7 +16,7 @@ pipeline {
       steps {  
         script {
           sh 'docker login -u $DOCKER_USERNAME -p $DOCKER_PASS'
-          sh 'dockerImage.push("latest")'
+          dockerImage.push("latest")
           }
         } 
       }
