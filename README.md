@@ -3,6 +3,15 @@
 Notes App is a Multi Page Application using Nodejs and Mysql. The purpose of this web application is just to be an example for beginners.
 
 # Project Deployment Guide
+## Overview
+in this design the deployment of nodejs application is separated into multiple stages.
+1.First the code Dockerized and the files are moved into github repo.
+2.Using Terraform to provide resources for running this project.
+3.Using AWSCLI to connect our AWS Cloud and create resources using Terraform.
+4.Amazon RDS MySQL is used for hosting our data in this project.
+4.In this we used to servers one for building and pushing our project other one is deploying our application.
+5.This continuous integration taken by jenkins and build push and deploy with pipeline.
+6.Finally monitoring our docker container using opensource prometheus and grafana.
 
 <img width="481" alt="Screenshot 2023-12-23 163933" src="https://github.com/Vennilavan12/FinalProject/assets/77039703/fdcadfb1-52f9-4561-b5cc-9d3d867363af">
 
