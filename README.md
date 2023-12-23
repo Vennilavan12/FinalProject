@@ -115,3 +115,28 @@
 <img width="960" alt="Screenshot 2023-12-23 123638" src="https://github.com/Vennilavan12/FinalProject/assets/77039703/efd92503-b69f-4539-9563-962711742cf3">
 <img width="959" alt="Screenshot 2023-12-23 123714" src="https://github.com/Vennilavan12/FinalProject/assets/77039703/d4573600-3130-4e1d-8ad9-0ab241fb92a7">
 <img width="960" alt="Screenshot 2023-12-23 123751" src="https://github.com/Vennilavan12/FinalProject/assets/77039703/e8061b26-c950-45f4-86e8-3d226650bced">
+
+## Challenges
+
+### 1. Node.js and DB Connection Issue
+
+If you encounter issues with the Node.js and database connection, ensure the following:
+
+- Check the configurations in `src/config.js` for accurate database details.
+- Verify that the MySQL server is accessible from the Node.js application.
+
+### 2. Terraform Userdata Installation Issue
+
+In case the Terraform userdata doesn't install correctly, consider the following:
+
+- Check the userdata script in your Terraform configuration.
+- Review the system logs on the affected instances for any error messages during userdata execution.
+- Manually run the installation commands to identify and resolve any issues.
+
+### 3. Grafana Metrics Retrieval Issue
+
+If Grafana is not fetching metrics correctly, troubleshoot using these steps:
+
+- Verify that Prometheus and Grafana are correctly configured and running.
+- Check the Prometheus configuration (`prometheus.yml`) to ensure jobs like `node_exporter` and `docker` are correctly defined.
+- Restart Prometheus and Grafana servers and monitor logs for any errors.
