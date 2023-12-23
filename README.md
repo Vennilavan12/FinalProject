@@ -4,6 +4,8 @@ Notes App is a Multi Page Application using Nodejs and Mysql. The purpose of thi
 
 # Project Deployment Guide
 
+<img width="481" alt="Screenshot 2023-12-23 163933" src="https://github.com/Vennilavan12/FinalProject/assets/77039703/fdcadfb1-52f9-4561-b5cc-9d3d867363af">
+
 ## AWSCLI
 
 1. Install AWS CLI.
@@ -76,4 +78,9 @@ Notes App is a Multi Page Application using Nodejs and Mysql. The purpose of thi
     - Grafana: http://publicip:3000
     - Docker logs: http://publicip:9323/metrics
 7. Create Grafana dashboard, add connections, and import Docker templates.
-
+   
+## Final Output
+<img width="959" alt="Screenshot 2023-12-23 123623" src="https://github.com/Vennilavan12/FinalProject/assets/77039703/20426e32-6fb1-42e5-8b73-0f65a7248a08">
+<img width="960" alt="Screenshot 2023-12-23 123638" src="https://github.com/Vennilavan12/FinalProject/assets/77039703/efd92503-b69f-4539-9563-962711742cf3">
+<img width="959" alt="Screenshot 2023-12-23 123714" src="https://github.com/Vennilavan12/FinalProject/assets/77039703/d4573600-3130-4e1d-8ad9-0ab241fb92a7">
+<img width="960" alt="Screenshot 2023-12-23 123751" src="https://github.com/Vennilavan12/FinalProject/assets/77039703/e8061b26-c950-45f4-86e8-3d226650bced">
