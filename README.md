@@ -30,7 +30,7 @@ Notes App is a Multi Page Application using Nodejs and Mysql. The purpose of thi
 1. Configure the database details in `src/config.js`.
 2. Modify `database/db.sql` with the desired database name.
 3. Connect to the BuildEC2 machine and install the MySQL client.
-4. Run `mysql -u username -p databasename -h DBendpoint` to connect to the MySQL database.
+4. Run `mysql -u username -p -h DBendpoint` to connect to the MySQL database.
 5. Paste the code from `db.sql` to create the database and tables.
 
 ## Dockerize
