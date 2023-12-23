@@ -34,7 +34,7 @@
 
 ![Screenshot](https://github.com/Vennilavan12/FinalProject/assets/77039703/fdcadfb1-52f9-4561-b5cc-9d3d867363af)
 
-Check this [link](https://github.com/Vennilavan12/FinalProject/tree/main/docs) for all output screenshots and configurations in the readme.md.
+# Check this [link](https://github.com/Vennilavan12/FinalProject/tree/main/docs) for all output screenshots and configurations in the readme.md.
 
 ## AWSCLI
 
