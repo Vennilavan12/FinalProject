@@ -1,31 +1,41 @@
-# Notes App with Nodejs and Mysql
+# Notes App with Node.js and MySQL
 
-Notes App is a Multi Page Application using Nodejs and Mysql. The purpose of this web application is just to be an example for beginners.
+**Notes App** is a Multi Page Application using Node.js and MySQL. This web application serves as an example for beginners.
 
-# Project Deployment Guide
-## Overview
-Stage 1: Dockerization and GitHub Repository
-Dockerize the Node.js application and move the files into a GitHub repository.
-Stage 2: Terraform Resource Provisioning
-Use Terraform to provision resources required for running the project.
-Stage 3: AWSCLI for AWS Cloud Connection
-Utilize AWSCLI to connect to the AWS Cloud and create resources using Terraform.
-Stage 4: Database Setup
-Set up Amazon RDS MySQL to host the data for the project.
-Stage 5: Two-server Configuration
-Utilize two servers for distinct purposes:
-One for building and pushing the project.
-Another for deploying the application.
-Stage 6: Continuous Integration with Jenkins
-Implement continuous integration using Jenkins:
-Build, push, and deploy with a Jenkins pipeline.
-Stage 7: Monitoring with Prometheus and Grafana
-Monitor Docker containers using Prometheus and Grafana:
-Configure Prometheus to collect metrics.
-Utilize Grafana for visualization.
-<img width="481" alt="Screenshot 2023-12-23 163933" src="https://github.com/Vennilavan12/FinalProject/assets/77039703/fdcadfb1-52f9-4561-b5cc-9d3d867363af">
+## Project Deployment Guide
 
-Check This Link for all output screenshots and configurations in readme.md: https://github.com/Vennilavan12/FinalProject/tree/main/docs
+### Overview
+
+#### Stage 1: Dockerization and GitHub Repository
+- Dockerize the Node.js application and move the files into a GitHub repository.
+
+#### Stage 2: Terraform Resource Provisioning
+- Use Terraform to provision resources required for running the project.
+
+#### Stage 3: AWSCLI for AWS Cloud Connection
+- Utilize AWSCLI to connect to the AWS Cloud and create resources using Terraform.
+
+#### Stage 4: Database Setup
+- Set up Amazon RDS MySQL to host the data for the project.
+
+#### Stage 5: Two-server Configuration
+- Utilize two servers for distinct purposes:
+  - One for building and pushing the project.
+  - Another for deploying the application.
+
+#### Stage 6: Continuous Integration with Jenkins
+- Implement continuous integration using Jenkins:
+  - Build, push, and deploy with a Jenkins pipeline.
+
+#### Stage 7: Monitoring with Prometheus and Grafana
+- Monitor Docker containers using Prometheus and Grafana:
+  - Configure Prometheus to collect metrics.
+  - Utilize Grafana for visualization.
+
+![Screenshot](https://github.com/Vennilavan12/FinalProject/assets/77039703/fdcadfb1-52f9-4561-b5cc-9d3d867363af)
+
+Check this [link](https://github.com/Vennilavan12/FinalProject/tree/main/docs) for all output screenshots and configurations in the readme.md.
+
 ## AWSCLI
 
 1. Install AWS CLI.
@@ -38,7 +48,7 @@ Check This Link for all output screenshots and configurations in readme.md: http
 1. Clone or download the repo locally using Visual Studio Code or Git Bash.
 2. Modify values in `Infra.tf`, `vars.tf`, and `terraform.tfvars` based on your AWS configuration.
 3. Run the following commands:
-    ```
+    ```bash
     terraform init
     terraform plan
     terraform apply
@@ -58,7 +68,7 @@ Check This Link for all output screenshots and configurations in readme.md: http
 1. Create a Dockerfile for the Node.js application.
 2. Use `package.json` to install dependencies and copy files.
 3. Build and test the Node.js application:
-    ```
+    ```bash
     docker build -t project .
     docker run -d -p 80:4000 project
     ```
@@ -87,8 +97,8 @@ Check This Link for all output screenshots and configurations in readme.md: http
 2. Run provided shell scripts.
 3. Create a `daemon.json` file for collecting Docker metrics.
 4. Add jobs to `node_exporter` and `docker` in `prometheus.yml`.
-5. Restart Prometheus and Docker servers.
-    ```
+5. Restart Prometheus and Docker servers:
+    ```bash
     sudo service Prometheus restart
     sudo service docker restart
     ```
@@ -98,6 +108,7 @@ Check This Link for all output screenshots and configurations in readme.md: http
     - Grafana: http://publicip:3000
     - Docker logs: http://publicip:9323/metrics
 7. Create Grafana dashboard, add connections, and import Docker templates.
+
    
 ## Final Output
 <img width="959" alt="Screenshot 2023-12-23 123623" src="https://github.com/Vennilavan12/FinalProject/assets/77039703/20426e32-6fb1-42e5-8b73-0f65a7248a08">
