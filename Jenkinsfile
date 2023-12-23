@@ -26,7 +26,14 @@ pipeline {
         script {
           sshagent(['ssh-mach']) {
           // Execute the command within the  sshagent block using sh step
-              sh 'ssh -o StrictHostKeyChecking=no ubuntu@3.141.190.169 "docker pull vennilavan/dev:latest; docker stop $(docker ps -q) && docker rm $(docker ps -a -q); docker run -d -p 80:4000 vennilavan/dev:latest"'
+             sh '''
+                    ssh -o StrictHostKeyChecking=no ubuntu@3.141.190.169 "
+                        docker pull vennilavan/dev:latest;
+                        docker ps -q | xargs docker stop;
+                        docker ps -a -q | xargs docker rm;
+                        docker run -d -p 80:4000 vennilavan/dev:latest
+                    "
+                '''
           }
         }
       }
