@@ -1,16 +1,6 @@
 variable "aws_region" {
   description = "AWS region where the RDS instance will be created."
 }
-variable "public_key" {
-  description = "SSH public key for the AWS key pair"
-  type        = string
-}
-
-variable "key_name" {
-  description = "Name for the AWS key pair"
-  type        = string
-}
-
 variable "db_instance_identifier" {
   description = "Identifier for the RDS instance."
 }
