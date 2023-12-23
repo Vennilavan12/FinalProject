@@ -3,11 +3,6 @@ provider "aws" {
   region = var.aws_region # Change this to your desired region
 }
 
-# Define key pair for EC2 instance
-resource "aws_key_pair" "Final" {
-   key_name   = var.key_name
-  public_key  = var.public_key
-}
 # Create security group for EC2 instance
 resource "aws_security_group" "Final" {
   name        = "Final"
@@ -98,7 +93,7 @@ resource "aws_security_group" "Final1" {
 resource "aws_instance" "BuildEC2" {
   ami             = "ami-05fb0b8c1424f266b" # Specify the desired AMI ID
   instance_type   = "t2.micro"
-  key_name        = aws_key_pair.Final.key_name
+  key_name        = "linux"
   vpc_security_group_ids  = [aws_security_group.Final.id]
   tags = {
     Name        = "Build Server"
@@ -120,7 +115,7 @@ resource "aws_instance" "BuildEC2" {
 resource "aws_instance" "DeployEC2" {
   ami             = "ami-05fb0b8c1424f266b" # Specify the desired AMI ID
   instance_type   = "t2.micro"
-  key_name        = aws_key_pair.Final.key_name
+  key_name        = "linux"
   vpc_security_group_ids  = [aws_security_group.Final1.id]
   tags = {
     Name        = "Deployment Server"
