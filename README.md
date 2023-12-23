@@ -6,6 +6,7 @@ Notes App is a Multi Page Application using Nodejs and Mysql. The purpose of thi
 
 <img width="481" alt="Screenshot 2023-12-23 163933" src="https://github.com/Vennilavan12/FinalProject/assets/77039703/fdcadfb1-52f9-4561-b5cc-9d3d867363af">
 
+Check This Link for all output screenshots and configurations in readme.md: https://github.com/Vennilavan12/FinalProject/tree/main/docs
 ## AWSCLI
 
 1. Install AWS CLI.
