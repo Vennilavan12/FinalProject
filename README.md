@@ -4,15 +4,25 @@ Notes App is a Multi Page Application using Nodejs and Mysql. The purpose of thi
 
 # Project Deployment Guide
 ## Overview
-in this design the deployment of nodejs application is separated into multiple stages.
-1.First the code Dockerized and the files are moved into github repo.
-2.Using Terraform to provide resources for running this project.
-3.Using AWSCLI to connect our AWS Cloud and create resources using Terraform.
-4.Amazon RDS MySQL is used for hosting our data in this project.
-4.In this we used to servers one for building and pushing our project other one is deploying our application.
-5.This continuous integration taken by jenkins and build push and deploy with pipeline.
-6.Finally monitoring our docker container using opensource prometheus and grafana.
-
+Stage 1: Dockerization and GitHub Repository
+Dockerize the Node.js application and move the files into a GitHub repository.
+Stage 2: Terraform Resource Provisioning
+Use Terraform to provision resources required for running the project.
+Stage 3: AWSCLI for AWS Cloud Connection
+Utilize AWSCLI to connect to the AWS Cloud and create resources using Terraform.
+Stage 4: Database Setup
+Set up Amazon RDS MySQL to host the data for the project.
+Stage 5: Two-server Configuration
+Utilize two servers for distinct purposes:
+One for building and pushing the project.
+Another for deploying the application.
+Stage 6: Continuous Integration with Jenkins
+Implement continuous integration using Jenkins:
+Build, push, and deploy with a Jenkins pipeline.
+Stage 7: Monitoring with Prometheus and Grafana
+Monitor Docker containers using Prometheus and Grafana:
+Configure Prometheus to collect metrics.
+Utilize Grafana for visualization.
 <img width="481" alt="Screenshot 2023-12-23 163933" src="https://github.com/Vennilavan12/FinalProject/assets/77039703/fdcadfb1-52f9-4561-b5cc-9d3d867363af">
 
 Check This Link for all output screenshots and configurations in readme.md: https://github.com/Vennilavan12/FinalProject/tree/main/docs
