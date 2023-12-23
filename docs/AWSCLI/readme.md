@@ -4,9 +4,9 @@
 
 1. Open Command Prompt and add the command.
 
-msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi
+**msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi**
 
-aws --version
+**aws --version**
 
 2. If any error add the installed path to your Environment Variables.
 
