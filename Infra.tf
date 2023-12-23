@@ -27,6 +27,12 @@ resource "aws_security_group" "Final" {
     protocol  = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
+  ingress {
+    from_port = 3306
+    to_port   = 3306
+    protocol  = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
 
   egress {
     from_port = 0
@@ -88,11 +94,17 @@ resource "aws_security_group" "Final1" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
+  egress {
+    from_port = 0
+    to_port   = 0
+    protocol  = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
 }  
 # Launch EC2 instance
 resource "aws_instance" "BuildEC2" {
   ami             = "ami-05fb0b8c1424f266b" # Specify the desired AMI ID
-  instance_type   = "t2.micro"
+  instance_type   = "t2.medium"
   key_name        = "linux"
   vpc_security_group_ids  = [aws_security_group.Final.id]
   tags = {
@@ -110,6 +122,8 @@ resource "aws_instance" "BuildEC2" {
                 /etc/apt/sources.list.d/jenkins.list > /dev/null
               sudo apt-get update
               sudo apt-get install jenkins -y
+              sudo apt install docker.io -y
+              sudo chmod 777 /var/run/docker.sock
               EOF
 }
 resource "aws_instance" "DeployEC2" {
@@ -125,7 +139,7 @@ resource "aws_instance" "DeployEC2" {
               sudo apt-get update
               sudo apt-get install openjdk-17-jre -y
               sudo apt-get update
-              sudo apt-get install docker.io -y
+              sudo apt install docker.io -y
               sudo chmod 777 /var/run/docker.sock
               EOF
 }  
