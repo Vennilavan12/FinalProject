@@ -15,8 +15,8 @@ pipeline {
     stage ('Push Image to Dockerhub') {
       steps {  
         script {
-          docker login -u $DOCKER_USERNAME -p $DOCKER_PASS
-          dockerImage.push("latest")
+          sh 'docker login -u $DOCKER_USERNAME -p $DOCKER_PASS'
+          sh 'dockerImage.push("latest")'
           }
         } 
       }
