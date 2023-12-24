@@ -42,6 +42,8 @@
 2. Configure IAM credentials with EC2, RDS, VPC, and CloudFormation Full Access permissions.
 3. Create and download Secret key and Access key as a .csv file.
 4. Run `aws configure` to configure the user.
+   
+https://github.com/Vennilavan12/FinalProject/tree/main/docs/AWSCLI >> Check this link for AWSCLI configuration and outputs.
 
 ## Terraform
 
@@ -55,6 +57,8 @@
     ```
 4. To remove resources, use `terraform destroy`.
 
+https://github.com/Vennilavan12/FinalProject/tree/main/docs/Terraform >> Check this link for Terraform Configuration and outputs.
+
 ## Database Configuration
 
 1. Configure the database details in `src/config.js`.
@@ -62,6 +66,8 @@
 3. Connect to the BuildEC2 machine and install the MySQL client.
 4. Run `mysql -u username -p -h DBendpoint` to connect to the MySQL database.
 5. Paste the code from `db.sql` to create the database and tables.
+
+https://github.com/Vennilavan12/FinalProject/tree/main/docs/RDS >> Check this link for Database Configuration and outputs.
 
 ## Dockerize
 
@@ -84,12 +90,16 @@
 7. Install SSH and SSH-Agent plugins for connecting to DeployEC2.
 8. Trigger the build; the pipeline script will execute.
 
+https://github.com/Vennilavan12/FinalProject/tree/main/docs/Jenkins >> check this link for Jenkins Configuration and outputs.
+
 ## DeployEC2
 
 1. Docker installation is done via Terraform.
 2. Once Jenkins build is successful, the application will run on DeployEC2.
 3. Check running containers using `docker ps`.
 4. Access the application using `http://publicip:80`.
+
+https://github.com/Vennilavan12/FinalProject/tree/main/docs/AWS >> Check this link for AWS Deployment and security group screenshot and outputs.
 
 ## Monitoring
 
@@ -109,6 +119,7 @@
     - Docker logs: http://publicip:9323/metrics
 7. Create Grafana dashboard, add connections, and import Docker templates.
 
+https://github.com/Vennilavan12/FinalProject/tree/main/docs/Monitoring >> Check this link for Monitoring configuration and outputs.
    
 ## Final Output
 <img width="959" alt="Screenshot 2023-12-23 123623" src="https://github.com/Vennilavan12/FinalProject/assets/77039703/20426e32-6fb1-42e5-8b73-0f65a7248a08">
