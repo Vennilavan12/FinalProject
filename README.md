@@ -78,6 +78,7 @@ https://github.com/Vennilavan12/FinalProject/tree/main/docs/RDS >> Check this li
     docker build -t project .
     docker run -d -p 80:4000 project
     ```
+https://github.com/Vennilavan12/FinalProject/tree/main/docs/Docker >> Check this link for Docker build and outputs.
 
 ## BuildEC2
 
