@@ -66,6 +66,7 @@ https://github.com/Vennilavan12/FinalProject/tree/main/docs/Terraform >> Check t
 3. Connect to the BuildEC2 machine and install the MySQL client.
 4. Run `mysql -u username -p -h DBendpoint` to connect to the MySQL database.
 5. Paste the code from `db.sql` to create the database and tables.
+6. check database will be available for make connection with our website.
 
 https://github.com/Vennilavan12/FinalProject/tree/main/docs/RDS >> Check this link for Database Configuration and outputs.
 
@@ -73,7 +74,8 @@ https://github.com/Vennilavan12/FinalProject/tree/main/docs/RDS >> Check this li
 
 1. Create a Dockerfile for the Node.js application.
 2. Use `package.json` to install dependencies and copy files.
-3. Build and test the Node.js application:
+3. Build and test the Node.js application.
+4. if you are facing any issues on opening application check database connection.
     ```bash
     docker build -t project .
     docker run -d -p 80:4000 project
